@@ -1,0 +1,75 @@
+<div class="container">
+  <form [formGroup]="surveyForm" (ngSubmit)="onSubmit()">
+    <!-- Personal Details -->
+    <div class="form_container">
+      <p>Personal Details: </p>
+      <div class="form_details">
+        <div class="form_input">
+          <label for="fullName">Full Names:</label>
+          <input id="fullName" formControlName="fullName" type="text" class="form-control">
+        </div>
+        <div class="form_input">
+          <label for="emailId">Email:</label>
+          <input id="emailId" formControlName="email" type="email" class="form-control">
+        </div>
+        <div class="form_input">
+          <label for="dateOfBirth">Date of Birth:</label>
+          <input id="dateOfBirth" formControlName="dateOfBirth" type="date" class="form-control">
+        </div>
+        <div class="form_input">
+          <label for="contactNo">Contact Number:</label>
+          <input id="contactNo" formControlName="contactNumber" type="text" class="form-control">
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Favorite Foods -->
+    <div class="form_checkbox_container">
+      <p>What is your favorite food?</p>
+      <div class="form_checkbox">
+        <div class="form_checkbox_input">
+          <input type="checkbox" formControlName="pizza">
+          <label>Pizza</label>
+        </div>
+        <div class="form_checkbox_input">
+          <input type="checkbox" formControlName="pasta">
+          <label>Pasta</label>
+        </div>
+        <div class="form_checkbox_input">
+          <input type="checkbox" formControlName="papWors">
+          <label>Pap and Wors</label>
+        </div>
+        <div class="form_checkbox_input">
+          <input type="checkbox" formControlName="other">
+          <label>Others</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rating Table -->
+    <div class="form_table_container">
+      <p>Please rate your level of agreement on a scale of 1 to 5, with 1 being "strongly agree" and 5 being "strongly disagree".</p>
+      <table class="rating-table">
+        <tr>
+          <th></th>
+          <th>Strongly Agree</th>
+          <th>Agree</th>
+          <th>Neutral</th>
+          <th>Disagree</th>
+          <th>Strongly Disagree</th>
+        </tr>
+        <tr *ngFor="let item of ratings">
+          <td>{{ item.label }}</td>
+          <td><input type="radio" [value]="1" [formControlName]="item.control" /></td>
+          <td><input type="radio" [value]="2" [formControlName]="item.control" /></td>
+          <td><input type="radio" [value]="3" [formControlName]="item.control" /></td>
+          <td><input type="radio" [value]="4" [formControlName]="item.control" /></td>
+          <td><input type="radio" [value]="5" [formControlName]="item.control" /></td>
+        </tr>
+      </table>
+    </div>
+
+    <button type="submit">SUBMIT</button>
+  </form>
+</div>

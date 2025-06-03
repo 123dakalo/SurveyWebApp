@@ -1,0 +1,47 @@
+nav{
+  width: 100%;
+  line-height: 5rem;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.nav_holder{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h1 a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+ul{
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+ul li a.active_link{
+  color: dodgerblue;
+  transition: all ease-out 0.3s;
+}
+
+
+/*section that will hold all navigated to pages */
+section{
+  margin-top: 5rem;
+}
+.body_container{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+

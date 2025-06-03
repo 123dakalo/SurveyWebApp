@@ -1,0 +1,45 @@
+<section class="survey_results_container">
+  <h1>Survey Results</h1>
+  <div class="survey_results">
+    <div>
+      <p>Total number of surveys :</p>
+      <p>Average Age  :</p>
+      <p>Oldest person who like pizza :</p>
+      <p>Youngest person who participated in survey :</p>
+    </div>
+    <div>
+      <p class="paragraph">{{ stats.totalSurveys }}</p>
+      <p class="paragraph">{{ stats.averageAge }}</p>
+      <p class="paragraph">{{ stats.oldestAge }}</p>
+      <p class="paragraph">{{ stats.youngestAge }}</p>
+    </div>
+  </div>
+
+  <div class="survey_results">
+    <div>
+      <p>Percentage of people who like pizza :</p>
+      <p>Percentage of people who like pasta :</p>
+      <p>Percentage of people who like pap and wors :</p>
+    </div>
+    <div>
+      <p class="paragraph">{{ stats.pizzaPercentage }}%</p>
+      <p class="paragraph">{{ stats.pastaPercentage }}%</p>
+      <p class="paragraph">{{ stats.papWorsPercentage }}%</p>
+    </div>
+  </div>
+
+  <div class="survey_results">
+    <div>
+      <p>People who like to watch movies :</p>
+      <p>People who like to listen to radio :</p>
+      <p>People who like to eat out :</p>
+      <p>People who like to watch tv :</p>
+    </div>
+    <div>
+      <p class="paragraph">{{ stats.moviesAverage }}</p>
+      <p class="paragraph">{{ stats.radioAverage }}</p>
+      <p class="paragraph">{{ stats.eatOutAverage }}</p>
+      <p class="paragraph">{{ stats.tvAverage }}</p>
+    </div>
+  </div>
+</section>
